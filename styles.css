@@ -90,6 +90,7 @@ header {
 }
 
 .cta-button {
+  margin-bottom: 1rem; /* adds space below the button */
   background-color: #0077b6;
   color: white;
   padding: 10px 20px;
