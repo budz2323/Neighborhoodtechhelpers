@@ -98,10 +98,16 @@ header {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
+  display: inline-block; /* ensures margin works properly */
 }
+
 
 .cta-button:hover {
   background-color: #005f8c;
+}
+
+.cta-button + p {
+  margin-top: 2rem; /* adds space above the paragraph immediately after the button */
 }
 
 /* Services */
