@@ -28,6 +28,7 @@ header {
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -45,6 +46,26 @@ header {
   font-size: 1.1rem;
   font-style: italic;
   margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 80px;
+  }
+
+  .header-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
 }
 
 /* Hero */
