@@ -9,21 +9,23 @@
 <body>
 
   <!-- HEADER -->
-  <header class="container flex justify-between align-center">
-    <img src="logo.png" alt="Neighborhood Tech Helpers Logo" class="logo" />
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="header">
+    <div class="container header-content">
+      <img src="logo.png" alt="Neighborhood Tech Helpers Logo" class="logo" />
+      <nav aria-label="Main navigation" class="nav-center">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section id="hero" class="section text-center" style="background-color: #e0e7ff;">
+  <section id="hero" class="hero section text-center">
     <div class="container">
-      <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Making Technology Simple for Homes and Small Businesses</h1>
-      <p style="font-size: 1.2rem; color: #374151; max-width: 600px; margin: 0 auto 30px;">
+      <h1>Making Technology Simple for Homes and Small Businesses</h1>
+      <p>
         From computer setup to Wi-Fi troubleshooting to Access database help — we make technology easy, clear, and stress-free.
       </p>
       <a href="#contact" class="btn">Get Help Now</a>
@@ -31,61 +33,85 @@
   </section>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="container section">
-    <h2>About Us</h2>
-    <p>Neighborhood Tech Helpers is your local solution for all technology needs. We help with computer setups, troubleshooting, and home networking.</p>
-  </section>
+<section id="about" class="section container">
+  <h2>About Us</h2>
+  <div class="about-me-content">
+    <img src="ME.JPG" alt="Your Tech Expert" class="me-photo" />
+    <div class="about-text">
+      <p>
+        At <strong>Neighborhood Tech Helpers</strong>, we make technology simple and stress-free for homes and small businesses. From computer setups to troubleshooting and personalized tech assistance, we ensure your devices work smoothly so you can focus on what matters most.
+      </p>
+      <ul>
+        <li>Home computer and device setup</li>
+        <li>Wi-Fi and networking assistance</li>
+        <li>Software troubleshooting and optimization</li>
+        <li>Personalized tech guidance and training</li>
+      </ul>
+      <p>
+        Our mission is to provide fast, friendly, and professional support tailored to your needs — no jargon, no frustration, just solutions that work.
+      </p>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- SERVICES SECTION -->
-  <section id="services" class="section" style="background-color: #f9fafb;">
+  <section id="services" class="section services" style="background-color: #f9fafb;">
     <div class="container">
       <h2 class="text-center">Our Services</h2>
-      <div class="flex justify-between align-center">
-        <article class="service text-center">
+      <div class="services-grid">
+        <article class="service-card">
           <h3>Home Computer Setup</h3>
-          <p>We set up your computer, printer, and Wi-Fi network efficiently so you can start working right away.</p>
+          <p>We handle everything from unboxing and configuring your computer to installing essential software, printers, and Wi-Fi networks, so you can get started immediately.</p>
         </article>
-        <article class="service text-center">
+        <article class="service-card">
           <h3>Troubleshooting</h3>
-          <p>We solve common tech issues quickly, from slow computers to software glitches.</p>
+          <p>We quickly identify and solve common issues such as slow computers, software glitches, or network problems, keeping your devices running smoothly.</p>
         </article>
-        <article class="service text-center">
+        <article class="service-card">
           <h3>Personal Tech Assistance</h3>
-          <p>Get hands-on help with your devices and software in the comfort of your home.</p>
+          <p>Hands-on support with devices, software, and training in the comfort of your home, ensuring you understand how to use your technology effectively.</p>
         </article>
       </div>
     </div>
-  </section>
+  
+
 
   <!-- PRICING SECTION -->
-  <section id="pricing" class="section text-center">
-    <div class="container">
-      <h2>Service Pricing</h2>
-      <p style="max-width: 700px; margin: 0 auto 30px;">
-        Pricing for tech support services varies based on complexity, duration, and software requirements. Every customer receives a personalized quote prior to service.
-      </p>
-      <div class="pricing-cards flex justify-between">
-        <article class="pricing-card">
-          <h3>Basic</h3>
-          <p class="price">$50</p>
-          <p>Includes home computer setup</p>
-          <a href="#contact" class="btn">Select</a>
-        </article>
-        <article class="pricing-card featured">
-          <h3>Standard</h3>
-          <p class="price">$250</p>
-          <p>Includes Basic + troubleshooting support</p>
-          <a href="#contact" class="btn">Select</a>
-        </article>
-        <article class="pricing-card">
-          <h3>Premium</h3>
-          <p class="price">$400</p>
-          <p>Includes Standard + personalized tech assistance</p>
-          <a href="#contact" class="btn">Select</a>
-        </article>
-      </div>
+<section id="pricing" class="section text-center">
+  <div class="container">
+    <h2>Service Pricing</h2>
+    <p>
+      Pricing varies based on complexity, duration, and software requirements. Every customer receives a personalized quote before service.
+    </p>
+    <div style="height: 40px;"></div>
+
+    <div class="pricing-cards">
+      <article class="pricing-card">
+        <h3>Basic</h3>
+        <p class="price">$50</p>
+        <p>Includes home computer setup: we'll get your computer, printer, and Wi-Fi configured so you can start using it immediately without frustration.</p>
+        <a href="#contact" class="btn">Select</a>
+      </article>
+      <article class="pricing-card featured">
+        <h3>Standard</h3>
+        <p class="price">$250</p>
+        <p>Includes Basic + troubleshooting support: we diagnose and fix software glitches, slow performance, and connectivity issues for a smooth tech experience.</p>
+        <a href="#contact" class="btn">Select</a>
+      </article>
+      <article class="pricing-card">
+        <h3>Premium</h3>
+        <p class="price">$400</p>
+        <p>Includes Standard + personalized tech assistance: hands-on support, setup, and coaching to ensure you are confident and comfortable with your devices and software.</p>
+        <a href="#contact" class="btn">Select</a>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Add a small spacer -->
+
 
   <!-- CONTACT SECTION -->
   <section id="contact" class="section text-center" style="background-color: #f9fafb;">
