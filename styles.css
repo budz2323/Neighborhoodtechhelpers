@@ -1,220 +1,98 @@
-/* ===========================
-   VARIABLES
-   =========================== */
-   :root {
-    /* Colors */
-    --color-primary: #1e3a8a;
-    --color-primary-light: #2563eb;
-    --color-secondary: #fbbf24;
-    --color-text: #1f2937;
-    --color-text-light: #4b5563;
-    --color-bg: #f5f7fa;
-    --color-white: #ffffff;
-    --color-border: #e5e7eb;
-    --color-footer: #6b7280;
-  
-    /* Spacing */
-    --space-xs: 10px;
-    --space-sm: 15px;
-    --space-md: 20px;
-    --space-lg: 30px;
-    --space-xl: 60px;
-  
-    /* Typography */
-    --font-family: 'Helvetica Neue', Arial, sans-serif;
-    --line-height: 1.6;
-  
-    /* Shadows */
-    --shadow-sm: 0 6px 15px rgba(0,0,0,0.15);
-    --shadow-md: 0 6px 18px rgba(0,0,0,0.08);
-    --shadow-lg: 0 12px 30px rgba(0,0,0,0.15);
-  
-    /* Border Radius */
-    --radius-sm: 8px;
-    --radius-md: 10px;
-    --radius-lg: 12px;
-  }
-  
-  /* ===========================
-     BASE / RESET
-     =========================== */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: var(--font-family);
-    line-height: var(--line-height);
-    color: var(--color-text);
-    background-color: var(--color-bg);
-  }
-  
-  a {
-    text-decoration: none;
-    color: var(--color-primary);
-    transition: color 0.3s ease;
-  }
-  
-  a:hover,
-  a:focus {
-    color: var(--color-primary-light);
-    outline: none;
-  }
-  
-  /* ===========================
-     LAYOUT / CONTAINERS
-     =========================== */
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 var(--space-md);
-  }
-  
-  .section {
-    padding: var(--space-xl) 0;
-  }
-  
-  /* ===========================
-     TYPOGRAPHY
-     =========================== */
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--color-primary);
-    margin-bottom: var(--space-md);
-  }
-  
-  p {
-    margin-bottom: var(--space-sm);
-    color: var(--color-text-light);
-  }
-  
-  /* ===========================
-     IMAGES
-     =========================== */
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .logo {
-    width: 150px;
-  }
-  
-  /* ===========================
-     BUTTONS
-     =========================== */
-  .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
-    color: var(--color-white);
-    border-radius: var(--radius-sm);
-    font-weight: bold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .btn:hover,
-  .btn:focus {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
-    outline: none;
-  }
-  
-  /* ===========================
-     UTILITY CLASSES
-     =========================== */
-  .text-center { text-align: center; }
-  .mt-20 { margin-top: var(--space-md); }
-  .mb-20 { margin-bottom: var(--space-md); }
-  .flex { display: flex; flex-wrap: wrap; }
-  .justify-between { justify-content: space-between; }
-  .align-center { align-items: center; }
-  
-  /* ===========================
-     HEADER / NAVIGATION
-     =========================== */
-  header {
-    padding: var(--space-md) 0;
-    border-bottom: 1px solid var(--color-border);
-    background-color: var(--color-white);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  nav a {
-    margin-left: var(--space-md);
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: var(--color-secondary);
-  }
-  
-  /* ===========================
-     SERVICES CARDS
-     =========================== */
-  .service {
-    flex: 1;
-    padding: var(--space-lg) var(--space-md);
-    margin: 0 var(--space-xs);
-    background-color: var(--color-white);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .service:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-  }
-  
-  /* ===========================
-     PRICING CARDS
-     =========================== */
-  .pricing-cards { gap: var(--space-md); margin-top: var(--space-lg); }
-  .pricing-card {
-    flex: 1;
-    background-color: var(--color-white);
-    border-radius: var(--radius-lg);
-    padding: 40px var(--space-md);
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .pricing-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-  }
-  
-  .pricing-card h3 { color: var(--color-primary); margin-bottom: var(--space-sm); }
-  .pricing-card .price { font-size: 30px; font-weight: bold; margin-bottom: var(--space-xs); color: var(--color-primary-light); }
-  .pricing-card p { color: var(--color-text-light); margin-bottom: var(--space-md); }
-  
-  @media (max-width: 900px) {
-    .flex { flex-direction: column; }
-    .pricing-card, .service { margin-bottom: var(--space-md); }
-  }
-  
-  /* ===========================
-     FOOTER
-     =========================== */
-  footer {
-    padding: var(--space-lg) 0;
-    border-top: 1px solid var(--color-border);
-    text-align: center;
-    color: var(--color-footer);
-    font-size: 14px;
-    background-color: #fdfdfd;
-  }
-  
-  footer a {
-    color: var(--color-primary);
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: var(--color-primary-light);
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neighborhood Tech Helpers</title>
+  <!-- CSS now points into Website folder -->
+  <link rel="stylesheet" href="Website/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="container flex justify-between align-center">
+    <!-- Logo path updated -->
+    <img src="Website/logo.png" alt="Neighborhood Tech Helpers Logo" class="logo">
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="container section text-center" id="hero">
+    <h1>Welcome to Neighborhood Tech Helpers</h1>
+    <p>We provide tech support, computer setup, and personalized assistance right in your neighborhood.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="container section">
+    <h2>About Us</h2>
+    <p>Neighborhood Tech Helpers is your local solution for all technology needs. We help with computer setups, troubleshooting, and home networking.</p>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="container section">
+    <h2>Our Services</h2>
+    <div class="flex justify-between align-center">
+      <article class="service">
+        <h3>Home Computer Setup</h3>
+        <p>We set up your computer, printer, and Wi-Fi network efficiently so you can start working right away.</p>
+      </article>
+      <article class="service">
+        <h3>Troubleshooting</h3>
+        <p>We solve common tech issues quickly, from slow computers to software glitches.</p>
+      </article>
+      <article class="service">
+        <h3>Personal Tech Assistance</h3>
+        <p>Get hands-on help with your devices and software in the comfort of your home.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section id="pricing" class="container section text-center">
+    <h2>Pricing</h2>
+    <div class="pricing-cards flex justify-between">
+      <article class="pricing-card">
+        <h3>Basic</h3>
+        <p class="price">$50</p>
+        <p>Includes home computer setup</p>
+        <a href="#contact" class="btn">Select</a>
+      </article>
+      <article class="pricing-card">
+        <h3>Standard</h3>
+        <p class="price">$250</p>
+        <p>Includes Basic + troubleshooting support</p>
+        <a href="#contact" class="btn">Select</a>
+      </article>
+      <article class="pricing-card">
+        <h3>Premium</h3>
+        <p class="price">$400</p>
+        <p>Includes Standard + personalized tech assistance</p>
+        <a href="#contact" class="btn">Select</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="container section text-center">
+    <h2>Contact Us</h2>
+    <p>
+      Email us at 
+      <a href="mailto:neighborhoodtechhelpers@gmail.com">neighborhoodtechhelpers@gmail.com</a> 
+      or call <a href="tel:8478632007">847‑863‑2007</a>
+    </p>
+    <a href="mailto:neighborhoodtechhelpers@gmail.com" class="btn">Email Us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Neighborhood Tech Helpers. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
